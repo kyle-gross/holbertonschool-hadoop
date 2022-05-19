@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """This script serves as the reducer for the MapReduce function"""
+
 import sys
 
 
