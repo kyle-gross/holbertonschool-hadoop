@@ -8,7 +8,7 @@ top_10 = []
 
 for line in sys.stdin:
     line = line.strip()
-    row = dict(zip(cols,[i for i in line.replace('\t', ',').split(',')]))
+    row = dict(zip(cols, [i for i in line.replace('\t', ',').split(',')]))
     try:
         salary = float(row['Salary'])
         if len(top_10) < 10:
