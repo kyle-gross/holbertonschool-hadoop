@@ -20,11 +20,3 @@ for line in sys.stdin:
         print(f'{id}\t{company},{total_yearly}')
     except:
         continue
-###
-# input = sys.stdin.read().split('\n')
-# headers = input[0].split(',')
-# print(f'{headers[0]}\t{headers[1]},{headers[3]}')
-# for row in input[1:]:
-#     data = row.split(',')
-#     if len(data) >= 4:
-#         print(f'{data[0]}\t{data[1]},{data[3]}')

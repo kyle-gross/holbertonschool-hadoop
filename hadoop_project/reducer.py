@@ -3,9 +3,6 @@
 import sys
 
 
-current_word = None
-current_count = 0
-word = None
 cols = ['id', 'company', 'Salary']
 top_10 = []
 

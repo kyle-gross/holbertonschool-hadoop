@@ -16,7 +16,7 @@
 
 Running any of these files requires an active Hadoop cluster on the local machine.
 
-### [0. HDFS with BASH (1)]( "0. HDFS with BASH (1)")
+### [0. HDFS with BASH (1)](https://github.com/kyle-gross/holbertonschool-hadoop/blob/master/hadoop_project/createdirectores.sh "0. HDFS with BASH (1)")
 
 Bash script which creates directories within HDFS.
 
@@ -26,7 +26,7 @@ Run with:
 $ ./createdirectories.sh
 ```
 
-### [1. HDFS with BASH (2)]( "1. HDFS with BASH (2)")
+### [1. HDFS with BASH (2)](https://github.com/kyle-gross/holbertonschool-hadoop/blob/master/hadoop_project/lao.sh "1. HDFS with BASH (2)")
 
 Bash script which uploads the file `lao.txt` to the `/holbies/input` directory on the HDFS.
 
@@ -36,7 +36,7 @@ Run with:
 $ ./lao.sh
 ```
 
-### [2. HDFS with BASH (3)]( "2. HDFS with BASH (3)")
+### [2. HDFS with BASH (3)](https://github.com/kyle-gross/holbertonschool-hadoop/blob/master/hadoop_project/text.sh "2. HDFS with BASH (3)")
 
 Bash script that displays the contents of `lao.txt` from the HDFS.
 
@@ -46,7 +46,7 @@ Run with:
 $ ./text.sh
 ```
 
-### [3. HDFS with Python (Snakebite): createdir]( "3. HDFS with Python (Snakebite): createdir")
+### [3. HDFS with Python (Snakebite): createdir](https://github.com/kyle-gross/holbertonschool-hadoop/blob/master/hadoop_project/4-createdir.py "3. HDFS with Python (Snakebite): createdir")
 
 Python script which creates directories on the HDFS.
 
@@ -56,7 +56,7 @@ Run with:
 $ ./4-createdir.py
 ```
 
-### [4. HDFS with Python (Snakebite): deletedir]( "4. HDFS with Python (Snakebite): deletedir")
+### [4. HDFS with Python (Snakebite): deletedir](https://github.com/kyle-gross/holbertonschool-hadoop/blob/master/hadoop_project/5-deletedir.py "4. HDFS with Python (Snakebite): deletedir")
 
 Python script which deleted directories on the HDFS.
 
@@ -66,7 +66,7 @@ Run with:
 $ ./5-deletedir.py
 ```
 
-### [5. HDFS with Python (Snakebite): download]( "5. HDFS with Python (Snakebite): download")
+### [5. HDFS with Python (Snakebite): download](https://github.com/kyle-gross/holbertonschool-hadoop/blob/master/hadoop_project/6-download.py "5. HDFS with Python (Snakebite): download")
 
 Python script that retrieves files listed in `l` and stores them in the `/home/tmp` directory of the user.
 
@@ -76,17 +76,18 @@ Run with:
 $ ./6-download.py
 ```
 
-### [6. MapReduce (mapper)]( "6. MapReduce (mapper)")
+### [6. MapReduce (mapper)](https://github.com/kyle-gross/holbertonschool-hadoop/blob/master/hadoop_project/mapper.py "6. MapReduce (mapper)")
 
 The mapper function for the MapReduce function. Displays relevant content of the csv file to stdout for the reducer function.
 
 Run with:
 
 ```bash
+$ hdfs dfs -put salaries.csv /holbies/input
 $ cat salaries.csv | ./mapper.py
 ```
 
-### [7. MapReduce (reducer)]( "7. MapReduce (reducer)")
+### [7. MapReduce (reducer)](https://github.com/kyle-gross/holbertonschool-hadoop/blob/master/hadoop_project/reducer.py "7. MapReduce (reducer)")
 
 The reducer function for the MapReduce function. Displays the top 10 highest salaries with their companies.
 
