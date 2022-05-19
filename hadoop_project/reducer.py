@@ -2,27 +2,22 @@
 """This script serves as the reducer for the MapReduce function"""
 
 import sys
-
+from datetime import datetime
 
 cols = ['id', 'company', 'Salary']
 top_10 = []
 
+now = datetime.now()
 for line in sys.stdin:
     line = line.strip()
     row = dict(zip(cols, [i for i in line.replace('\t', ',').split(',')]))
     try:
         salary = float(row['Salary'])
-        if len(top_10) < 10:
-            top_10.append(row)
-        else:
-            for i in range(10):
-                if salary > float(top_10[i]['Salary']):
-                    top_10[i] = row
-                    break
+        top_10.append(row)
     except:
         continue
 
-top_10 = reversed(sorted(top_10, key=lambda d: float(d['Salary'])))
+top_10 = list(reversed(sorted(top_10, key=lambda d: float(d['Salary']))))[:10]
 
 print('id\tSalary\tcompany')
 for row in top_10:
