@@ -2,12 +2,11 @@
 """This script serves as the reducer for the MapReduce function"""
 
 import sys
-from datetime import datetime
+
 
 cols = ['id', 'company', 'Salary']
 top_10 = []
 
-now = datetime.now()
 for line in sys.stdin:
     line = line.strip()
     row = dict(zip(cols, [i for i in line.replace('\t', ',').split(',')]))
